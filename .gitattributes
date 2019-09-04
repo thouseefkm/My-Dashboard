@@ -1,2 +1,3 @@
 link/*.py linguist-language=Python
 mysite/*.py linguist-language=Python
+static/* linguist-documentation=false
