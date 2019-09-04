@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link App</title>
+</head>
+<body>
+    <table>
+        <tbody>
+        <div>
+            {% for link in links %}
+            <ul>
+                <li><a href="{% url "link:linkn_detail"  link.id  %}">{{ link.label }}</a></li>
+            </ul>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+    <a  href="{% url "link:link" %}">Create New</a>
+</body>
+</html>

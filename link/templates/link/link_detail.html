@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link Details</title>
+</head>
+<body>
+    <h1>Link Details</h1>
+
+    <p>Category: {{object.category}}</p>
+    <p>Label: {{object.label}}</p>
+    <p>Link: {{object.link}}</p>
+    <a href="{% url "link:link_list" %}" > <u>Home</u ></a>
+    <a href="{% url "link:link_edit" object.id %}" > <u>Edit</u> </a>
+    <a href="{% url "link:link_delete" object.id %}" > <u>Delete</u> </a>
+    </body>
+</html>

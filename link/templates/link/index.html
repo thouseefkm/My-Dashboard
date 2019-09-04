@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ STATIC_URL }}link/img/favicon.ico">
+    <title>NBN-TOOLBOX</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'link/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'link/css/material-icons.css' %}">
+  </head>
+
+  <body>
+    <header>
+      <!-- NAVBAR -->
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow">
+            <a class="my-0 mr-md-auto font-weight-normal navbar-brand" href="index.html"><img src="{% static 'link/img/NBN_Logo.png' %}" alt="NBN Logo"> - Devop Toolbox Links:</a>
+            <nav class="my-2 my-md-0 mr-md-3">
+              <b>
+              <a class="p-2 text-dark" href="https://nbn-sandpit-test.signin.aws.amazon.com/console">[AWS - NBNCo SANDBOX]</a>
+              <a class="p-2 text-dark" href="https://adfs.nbnco.net.au/adfs/ls/idpinitiatedsignon.aspx">[AWS - SNPM ACCOUNT]</a>
+              <a class="p-2 text-dark" href="#">[AWS - NR ACCOUNT]</a>
+            </b>
+            </nav>
+            <a class="btn btn-outline-primary" href="https://google.com.au">GOOGLE</a>
+          </div>
+    </header>
+      <!-- END NAVBAR -->
+      <main role="main" class="container">
+        <a class="btn btn-outline-primary" href="{% url 'link:link_new' %}">+ Add New</a><br><br>
+
+        {% load link_extras %}
+        <div class="row">
+
+          {% for category, links in links_dict.items %}
+          <div class="col-sm shadow p-3 mb-5 bg-white rounded border">
+
+            <b>{{ category  }}</b><br>
+            <table>
+            {% for link in links %}
+
+            <tr>
+              <td style="width:200px">
+                  <img src="{{ link.link }}/favicon.ico" alt="" width="20" height="20">
+                  <a href="{{ link.link }}" target="_blank">{{ link.label }}</a>
+              </td>
+              <td>
+                <a class="edit" title="Edit" data-toggle="tooltip" href="{% url "link:link_edit" link.id %}"><i class="material-icons">&#xE254;</i></a>
+                <a class="delete" title="Delete" data-toggle="tooltip" href="{% url "link:link_delete" link.id %}" Onclick="return ConfirmDelete();"><i class="material-icons">&#xE872;</i></a><br>
+              </td>
+            </tr>
+
+            {% endfor %}
+            </table>
+          </div>
+
+          {% is_multiple_of_3 forloop.counter as is_new %}
+
+          {% if is_new %}
+            </div><div class="row">
+          {% endif %}
+          {% endfor %}
+        </div> <!-- END OF FIRST ROW -->
+
+      </main><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'link/js/confirm-delete.js' %}"></script>
+    <script src="{% static 'link/js/jquery-3.3.1.min.js' %}" ></script>
+    <script src="{% static 'link/js/popper.js' %}"></script>
+  </body>
+</html>

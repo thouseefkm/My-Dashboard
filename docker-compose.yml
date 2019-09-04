@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: nr_devops_toolbox
+    ports:
+      - "80:8000"

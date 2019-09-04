@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link Edit</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'link/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'link/css/content-center.css' %}">
+
+</head>
+<body>
+<div class="login_div">
+    <form class="login_form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <table>
+            {{ form.as_table }}
+            </table>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </form>
+</div>
+</body>
+</html>
