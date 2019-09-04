@@ -1,8 +1,8 @@
-/link/*.py linguist-language=Python
-/mysite/*.py linguist-language=Python
-/static/admin/js/*.js linguist-vendored
-/static/contact/js/*.js linguist-vendored
-/link/static/link/js/*.js linguist-vendored
-/static/admin/css/*.css linguist-vendored
-/static/contact/css/*.css linguist-vendored
-/link/static/link/css/*.css linguist-vendored
+link/*.py linguist-language=Python
+mysite/*.py linguist-language=Python
+static/admin/js/*.js linguist-vendored
+static/contact/js/*.js linguist-vendored
+link/static/link/js/*.js linguist-vendored
+static/admin/css/*.css linguist-vendored
+static/contact/css/*.css linguist-vendored
+link/static/link/css/*.css linguist-vendored
