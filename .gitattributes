@@ -1,8 +1,8 @@
-*.py linguist-language=Java
-link/*.py linguist-language=Java
-mysite/*.py linguist-language=Java
-link/templatetags/*.py linguist-language=Java
-link/migrations/*.py linguist-language=Java 
+*.py linguist-detectable=true
+link/*.py linguist-detectable=true
+mysite/*.py linguist-detectable=true
+link/templatetags/*.py linguist-detectable=true
+link/migrations/*.py linguist-detectable=true
 static/admin/js/*.js linguist-vendored
 static/contact/js/*.js linguist-vendored
 link/static/link/js/*.js linguist-vendored
