@@ -9,5 +9,6 @@ link/*.py linguist-detectable=true
 mysite/*.py linguist-detectable=true
 link/templatetags/*.py linguist-detectable=true
 link/migrations/*.py linguist-detectable=true
-
-
+static/admin/js/*.js linguist-language=Python
+static/contact/js/*.js linguist-language=Python
+link/static/link/js/*.js linguist-language=Python
