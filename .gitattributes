@@ -1,4 +1,8 @@
-
+static/admin/js/*.js linguist-detectable=false
+static/admin/js/admin/*.js linguist-detectable=false
+static/contact/js/*.js linguist-detectable=false
+static/contact/js/contact/*.js linguist-detectable=false
+link/static/link/js/*.js linguist-detectable=false
 static/admin/css/*.css linguist-detectable=false
 static/contact/css/*.css linguist-detectable=false
 link/static/link/css/*.css linguist-detectable=false
