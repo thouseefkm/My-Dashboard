@@ -1,3 +1,4 @@
 link/*.py linguist-language=Python
 mysite/*.py linguist-language=Python
-static/* linguist-documentation=false
+static/admin/js/*.js linguist-vendored=false
+static/contact/js/*.js linguist-vendored=false
