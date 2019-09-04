@@ -2,3 +2,4 @@ link/*.py linguist-language=Python
 mysite/*.py linguist-language=Python
 static/admin/js/*.js linguist-vendored
 static/contact/js/*.js linguist-vendored
+/link/static/link/js/*.js linguist-vendored
